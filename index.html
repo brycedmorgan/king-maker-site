@@ -77,18 +77,12 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--km-black);
             text-decoration: none;
-            letter-spacing: -0.02em;
         }
         
-        .crown-icon {
-            width: 32px;
-            height: 24px;
-            color: var(--km-neon-rose);
+        .logo-image {
+            height: 40px;
+            width: auto;
         }
         
         nav a {
@@ -266,9 +260,8 @@
                 font-size: 1.2rem;
             }
             
-            .crown-icon {
-                width: 28px;
-                height: 21px;
+            .logo-image {
+                height: 35px;
             }
             
             nav a {
@@ -333,14 +326,7 @@
     <div class="container">
         <header>
             <a href="/" class="logo">
-                <!-- Crown SVG Icon -->
-                <svg class="crown-icon" viewBox="0 0 32 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 20L6 4L10 12L16 2L22 12L26 4L30 20H2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
-                    <circle cx="6" cy="4" r="1.5" fill="currentColor"/>
-                    <circle cx="16" cy="2" r="1.5" fill="currentColor"/>
-                    <circle cx="26" cy="4" r="1.5" fill="currentColor"/>
-                </svg>
-                King Maker
+                <img src="king-maker-logo.jpg" alt="King Maker Logo" class="logo-image">
             </a>
             <nav>
                 <a href="#services">Services</a>
