@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Maker - Marketing That Rules</title>
+    <meta name="description" content="King Maker is a marketing agency that creates campaigns that rule. Custom strategies, authentic brand stories, and results that matter.">
+    
+    <!-- AEO Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MarketingAgency",
+        "name": "King Maker",
+        "description": "Marketing agency specializing in custom campaigns and brand strategy",
+        "url": "https://mktrpro.com",
+        "email": "brett@mktrpro.com",
+        "foundingDate": "2024",
+        "areaServed": "United States",
+        "serviceType": ["Marketing Strategy", "Brand Development", "Digital Marketing", "Content Creation"]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        
+        nav a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+        
+        .hero {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(4rem, 12vw, 10rem);
+            font-weight: 900;
+            line-height: 0.85;
+            letter-spacing: -0.05em;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+        
+        .hero h1 .gold {
+            color: #DAA520;
+            display: block;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #000;
+            border: 2px solid #000;
+        }
+        
+        .btn-secondary:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .contact-info {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .gullstack-footer {
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .gullstack-footer a {
+            color: #999;
+            text-decoration: none;
+        }
+        
+        .gullstack-footer a:hover {
+            color: #000;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+            
+            nav a {
+                margin-left: 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            main {
+                padding: 6rem 1.5rem 3rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        /* Crown animation on hover */
+        @keyframes crown {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        
+        .hero h1:hover .gold {
+            animation: crown 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo">KING MAKER</a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="hero">
+                <h1>KING <span class="gold">MAKER</span></h1>
+                
+                <p class="tagline">Marketing that rules.</p>
+                
+                <p class="description">
+                    King Maker is specialized in creating custom marketing campaigns, 
+                    authentic brand stories, and strategies that actually work. 
+                    Every campaign is built with purpose, creativity, and a focus on results that matter.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="mailto:brett@mktrpro.com" class="btn btn-primary">Start Your Campaign</a>
+                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <a href="mailto:brett@mktrpro.com">brett@mktrpro.com</a>
+                </div>
+                <div class="gullstack-footer">
+                    Built by <a href="https://gullstack.com" target="_blank">GullStack</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
