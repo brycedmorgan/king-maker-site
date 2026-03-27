@@ -6,6 +6,11 @@
     <title>King Maker - Marketing That Rules</title>
     <meta name="description" content="King Maker is a marketing agency that creates campaigns that rule. Custom strategies, authentic brand stories, and results that matter.">
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
     <!-- AEO Schema -->
     <script type="application/ld+json">
     {
@@ -22,6 +27,18 @@
     </script>
     
     <style>
+        :root {
+            /* King Maker Brand Colors */
+            --km-neon-rose: #F906D6;
+            --km-blue: #3B00FD;
+            --km-electric-green: #00F92A;
+            --km-sky-aqua: #04CAF4;
+            --km-lime-yellow: #D1F60A;
+            --km-light-grey: #D8DAE0;
+            --km-white: #FFFFFF;
+            --km-black: #000000;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -29,9 +46,9 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #ffffff;
-            color: #000000;
+            font-family: 'Playfair Display', Georgia, serif;
+            background: var(--km-white);
+            color: var(--km-black);
             overflow-x: hidden;
         }
         
@@ -58,23 +75,32 @@
         }
         
         .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: #000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--km-black);
             text-decoration: none;
             letter-spacing: -0.02em;
         }
         
+        .crown-icon {
+            width: 32px;
+            height: 24px;
+            color: var(--km-neon-rose);
+        }
+        
         nav a {
-            color: #000;
+            color: var(--km-black);
             text-decoration: none;
             margin-left: 2rem;
             font-weight: 500;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         nav a:hover {
-            opacity: 0.7;
+            color: var(--km-neon-rose);
         }
         
         /* Main Content */
@@ -88,88 +114,104 @@
         }
         
         .hero {
-            max-width: 800px;
+            max-width: 1000px;
+        }
+        
+        .hero-crown {
+            width: clamp(80px, 15vw, 150px);
+            height: auto;
+            margin-bottom: 1rem;
+            color: var(--km-neon-rose);
+            filter: drop-shadow(0 0 20px rgba(249, 6, 214, 0.3));
         }
         
         .hero h1 {
-            font-size: clamp(4rem, 12vw, 10rem);
+            font-size: clamp(6rem, 18vw, 16rem);
             font-weight: 900;
-            line-height: 0.85;
-            letter-spacing: -0.05em;
+            line-height: 0.75;
+            letter-spacing: -0.08em;
             margin-bottom: 2rem;
-            color: #000;
+            color: var(--km-black);
+            font-family: 'Playfair Display', Georgia, serif;
         }
         
-        .hero h1 .gold {
-            color: #DAA520;
+        .hero h1 .maker {
+            color: var(--km-neon-rose);
             display: block;
+            text-shadow: 0 0 40px rgba(249, 6, 214, 0.4);
         }
         
         .tagline {
-            font-size: 1.25rem;
-            color: #666;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--km-black);
             margin-bottom: 2rem;
-            font-weight: 400;
-            line-height: 1.4;
+            font-weight: 600;
+            line-height: 1.2;
+            text-transform: lowercase;
         }
         
         .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #333;
+            font-size: clamp(1rem, 2.2vw, 1.3rem);
+            line-height: 1.5;
+            color: #444;
             margin-bottom: 4rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 400;
         }
         
         /* CTA Buttons */
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
+            padding: 1.2rem 3rem;
+            border-radius: 60px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', Georgia, serif;
         }
         
         .btn-primary {
-            background: #000;
-            color: #fff;
+            background: var(--km-black);
+            color: var(--km-white);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         
         .btn-primary:hover {
-            background: #333;
-            transform: translateY(-2px);
+            background: var(--km-neon-rose);
+            color: var(--km-black);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(249, 6, 214, 0.4);
         }
         
         .btn-secondary {
             background: transparent;
-            color: #000;
-            border: 2px solid #000;
+            color: var(--km-black);
+            border: 3px solid var(--km-black);
         }
         
         .btn-secondary:hover {
-            background: #000;
-            color: #fff;
-            transform: translateY(-2px);
+            background: var(--km-black);
+            color: var(--km-white);
+            transform: translateY(-4px);
         }
         
         /* Footer */
         footer {
-            padding: 2rem;
+            padding: 3rem 2rem 2rem;
             text-align: center;
-            border-top: 1px solid #eee;
+            border-top: 1px solid var(--km-light-grey);
             margin-top: auto;
         }
         
@@ -185,26 +227,33 @@
         
         .contact-info {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 500;
         }
         
         .contact-info a {
-            color: #000;
+            color: var(--km-black);
             text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            color: var(--km-neon-rose);
         }
         
         .gullstack-footer {
-            font-size: 0.8rem;
-            color: #999;
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 400;
         }
         
         .gullstack-footer a {
-            color: #999;
+            color: #888;
             text-decoration: none;
         }
         
         .gullstack-footer a:hover {
-            color: #000;
+            color: var(--km-black);
         }
         
         /* Responsive */
@@ -213,41 +262,86 @@
                 padding: 1.5rem;
             }
             
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .crown-icon {
+                width: 28px;
+                height: 21px;
+            }
+            
             nav a {
                 margin-left: 1.5rem;
                 font-size: 0.9rem;
             }
             
             main {
-                padding: 6rem 1.5rem 3rem;
+                padding: 7rem 1.5rem 4rem;
+            }
+            
+            .hero-crown {
+                width: 60px;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 280px;
+                padding: 1rem 2rem;
             }
             
             .footer-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 1.5rem;
             }
         }
         
-        /* Crown animation on hover */
-        @keyframes crown {
-            0%, 100% { transform: rotate(-2deg); }
-            50% { transform: rotate(2deg); }
+        /* Crown pulse animation */
+        @keyframes crown-pulse {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px rgba(249, 6, 214, 0.3));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 30px rgba(249, 6, 214, 0.6));
+                transform: scale(1.05);
+            }
         }
         
-        .hero h1:hover .gold {
-            animation: crown 0.6s ease-in-out;
+        .hero-crown:hover {
+            animation: crown-pulse 1s ease-in-out;
+        }
+        
+        /* Text glow effect */
+        .hero h1 .maker {
+            animation: subtle-glow 3s ease-in-out infinite;
+        }
+        
+        @keyframes subtle-glow {
+            0%, 100% { text-shadow: 0 0 40px rgba(249, 6, 214, 0.4); }
+            50% { text-shadow: 0 0 60px rgba(249, 6, 214, 0.6); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="/" class="logo">KING MAKER</a>
+            <a href="/" class="logo">
+                <!-- Crown SVG Icon -->
+                <svg class="crown-icon" viewBox="0 0 32 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 20L6 4L10 12L16 2L22 12L26 4L30 20H2Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+                    <circle cx="6" cy="4" r="1.5" fill="currentColor"/>
+                    <circle cx="16" cy="2" r="1.5" fill="currentColor"/>
+                    <circle cx="26" cy="4" r="1.5" fill="currentColor"/>
+                </svg>
+                King Maker
+            </a>
             <nav>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
@@ -256,19 +350,29 @@
         
         <main>
             <div class="hero">
-                <h1>KING <span class="gold">MAKER</span></h1>
+                <!-- Large Crown Icon -->
+                <svg class="hero-crown" viewBox="0 0 150 120" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 100L30 20L50 60L75 10L100 60L120 20L140 100H10Z" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+                    <circle cx="30" cy="20" r="4" fill="currentColor"/>
+                    <circle cx="75" cy="10" r="4" fill="currentColor"/>
+                    <circle cx="120" cy="20" r="4" fill="currentColor"/>
+                    <!-- Paint drips effect -->
+                    <path d="M25 24L25 30M80 14L80 22M115 24L115 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
                 
-                <p class="tagline">Marketing that rules.</p>
+                <h1>KING<br><span class="maker">MAKER</span></h1>
+                
+                <p class="tagline">marketing that rules the streets.</p>
                 
                 <p class="description">
-                    King Maker is specialized in creating custom marketing campaigns, 
-                    authentic brand stories, and strategies that actually work. 
-                    Every campaign is built with purpose, creativity, and a focus on results that matter.
+                    We specialize in bold campaigns that cut through the noise. 
+                    Street-smart strategies, authentic brand stories, and results that actually matter. 
+                    Built with raw creativity and refined execution.
                 </p>
                 
                 <div class="cta-buttons">
-                    <a href="mailto:brett@mktrpro.com" class="btn btn-primary">Start Your Campaign</a>
-                    <a href="#services" class="btn btn-secondary">Our Services</a>
+                    <a href="mailto:brett@mktrpro.com" class="btn btn-primary">Rule Your Market</a>
+                    <a href="#services" class="btn btn-secondary">See Our Work</a>
                 </div>
             </div>
         </main>
